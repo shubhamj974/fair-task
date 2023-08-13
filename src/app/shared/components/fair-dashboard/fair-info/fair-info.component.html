@@ -3,14 +3,14 @@
     <img [src]="item.bannerUrl" class="card-img img-fluid" alt="..." />
   </div>
   <div class="card-img-overlay text-white">
-    <h5 class="card-title">ISS Washington DC Fair</h5>
+    <h5 class="card-title">{{item.fairName}}</h5>
     <p class="card-text m-0">
       <span>Event Type : </span>
       <span>{{item.type}}</span>
     </p>
     <p class="card-text m-0">
       <span>Registration Deadline : </span>
-      <span>Oct 14 2023</span>
+      <span>{{item.startDate.slice(0 ,15)}}</span>
     </p>
   </div>
   <button type="button" class="btn btn-warning btn-lg btn-position">
