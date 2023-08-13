@@ -1,0 +1,28 @@
+<h3 class="pri-heading">fairs</h3>
+<div class="card mb-4" *ngFor="let card of fairDataToChild ; index as i" (click)="onCardClick(cardID)" #fairCardID>
+  <div class="card-body bg-color" [id]="card.fairId" #cardID [ngClass]="{'card-bg' : card.fairId === id}">
+    <h4 class="sec-heading">{{card.fairName}}</h4>
+    <div class="card-info p-3">
+      <div class="first">
+        <p>
+          <span class="text-color-dt">Event Type : </span>
+          <span class="text-color-ss">{{card.type}}</span>
+        </p>
+        <p>
+          <span class="text-color-dt">Date : </span>
+          <span class="text-color-ss">{{card.startDate}}</span>
+        </p>
+      </div>
+      <div class="second">
+        <p>
+          <span class="text-color-dt">School : </span>
+          <span class="text-color-ss">{{card.numberOfSchoolsRegistered}}</span>
+        </p>
+        <p>
+          <span class="text-color-dt">Job : </span>
+          <span class="text-color-ss">{{card.numberOfUsersRegistered}} </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

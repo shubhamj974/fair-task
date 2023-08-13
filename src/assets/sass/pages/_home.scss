@@ -1,0 +1,143 @@
+.fair {
+  .card-height {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+
+    .over {
+      height: 100%;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .img-fluid {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-img-overlay {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media all and (max-width:600px) {
+        height: 65%;
+      }
+
+      .card-title {
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+
+      .card-text {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.card-height {
+  position: relative;
+
+  .btn-position {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    color: $white-color;
+    padding: 10px 30px;
+    font-weight: 500;
+    background-color: #d6912b !important;
+    border-color: #d6912b;
+
+    @media all and (max-width : 600px) {
+      right: 15px;
+      bottom: 67px;
+      font-size: 1rem;
+    }
+  }
+
+  .fair-details {
+    background-color: $white-color;
+    min-height: auto;
+    position: relative;
+
+    .attending {
+      @media all and (max-width : 600px) {
+        justify-content: center;
+      }
+    }
+
+    .fair-school {
+      color: #fff;
+      font-size: 1.25rem;
+      background-color: #dddcdc;
+      padding: 10px 30px;
+      display: block;
+      font-weight: 700;
+      border-radius: 5px;
+
+      @media all and (max-width : 600px) {
+        font-size: 1rem;
+      }
+    }
+
+    .sec-heading {
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+
+    .pri-para {
+      font-size: 1.2rem;
+      color: $text-color;
+      border-bottom: 1px solid #e5e3e3;
+      display: inline-block;
+      padding-bottom: 1.25rem;
+    }
+
+    .pri-heading {
+      font-size: 1.25rem;
+      color: #c0bbbb;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.fair-details {
+  .event-dt {
+    span {
+      color: $pri-text-color;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  .editZone {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: green;
+    font-weight: 600;
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+
+    @media all and (max-width : 600px) {
+      left: 15px;
+      top: 100%;
+    }
+  }
+
+  .border-b {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}

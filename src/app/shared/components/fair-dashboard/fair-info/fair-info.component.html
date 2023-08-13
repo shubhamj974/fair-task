@@ -1,0 +1,56 @@
+<div class="card card-height" *ngFor="let item of fairInfoDataToChild ; index as i">
+  <div class="over">
+    <img [src]="item.bannerUrl" class="card-img img-fluid" alt="..." />
+  </div>
+  <div class="card-img-overlay text-white">
+    <h5 class="card-title">ISS Washington DC Fair</h5>
+    <p class="card-text m-0">
+      <span>Event Type : </span>
+      <span>{{item.type}}</span>
+    </p>
+    <p class="card-text m-0">
+      <span>Registration Deadline : </span>
+      <span>Oct 14 2023</span>
+    </p>
+  </div>
+  <button type="button" class="btn btn-warning btn-lg btn-position">
+    Register
+  </button>
+  <div class="card-body fair-details p-5">
+    <div class="attending d-flex mb-4">
+      <span class="fair-school mr-3"><i class="fas fa-school"></i> {{item.numberOfSchoolsRegistered}} Schools
+        Attending</span>
+      <span class="fair-school"><i class="fas fa-user-md"></i> Job at School Attending</span>
+    </div>
+    <div class="row border-b">
+      <div class="col-md-6">
+        <i class="fas fa-map-marker-alt fa-2x mb-3"></i>
+        <h2 class="pri-heading">event dates & times</h2>
+        <div class="event-dt">
+          <p>
+            <span>{{item.startDate}} </span>
+          </p>
+          <p>
+            <span>{{item.endDate}} </span>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3 class="sec-heading">
+          selected time zone
+        </h3>
+        <p class="pri-para">Thu Feb 09 2023 11:30:00 GMT+0530 (India Standard Time)</p>
+        <h4 class="sec-heading">other time zone</h4>
+        <span class="editZone">edit time zones</span>
+      </div>
+
+    </div>
+    <div class="discription">
+      <h4 class="pri-heading">discription</h4>
+      <h5 class="pri-heading">candidate discription</h5>
+      <p [innerHTML]="item.candidateDescription"></p>
+      <h6 class="pri-heading">school discription</h6>
+      <p [innerHTML]="item.schoolDescription"></p>
+    </div>
+  </div>
+</div>
